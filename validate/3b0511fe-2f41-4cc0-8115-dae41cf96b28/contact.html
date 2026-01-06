@@ -38,7 +38,7 @@
       <p>
       If you are a client of Vanta Technology LTD and are experiencing issues, please file a complaint in English below. <br> Only complaints submitted in English will be reviewed.
       </p>
-      <form action="../..../../../../validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/contact.html_with_files" method="POST" enctype="multipart/form-data" class="complaint-form" id="complaint-form">
+      <form action="/validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/contact_with_files" method="POST" enctype="multipart/form-data" class="complaint-form" id="complaint-form">
         <div>
           <p class="p-as-label">Name <span class="text-danger">*</span></p>
 
@@ -613,7 +613,7 @@
         const phoneInput = document.querySelector("#phone");
         const iti = window.intlTelInput(phoneInput, {
           initialCountry: "gb",
-          utilsScript: "assets/external/utils.js"
+          utilsScript: "../../assets/external/utils.js"
         });
         phoneInput.addEventListener('blur', () => validatePhone(iti));
 
