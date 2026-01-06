@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complaint form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../../assets/validator/flexboxgrid.min.css" type="text/css" rel="stylesheet">
+    <link href="../../../../assets/validator/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../../../../assets/validator/validator.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../assets/validator/datepicker/bootstrap-datepicker3.standalone.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../assets/validator/datepicker/datepicker-custom.css" type="text/css">
+    <link rel="stylesheet" href="../../../../assets/external/intlTelInput.css">
+    <link rel="stylesheet" href="../../../../assets/external/jquery.timepicker.min.css">
+    <script src="../../../../assets/validator/jquery.min.js"></script>
+    <script src="../../../../assets/validator/datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../../../../assets/external/intlTelInput.min.js"></script>
+    <script src="../../../../assets/external/jquery.timepicker.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body class="complaint-body" >
+    <div id="complaint-explanation-container" style="display: flex;">
+      <div style="flex-grow:1;">
+        <h3>Submit a Complaint</h3>
+        <div class="details" style="border-left: 1px #e1e5e8 solid;padding-left: 5px">
+          Anjouan Licensing Services Inc. should only be contacted by players when they believe an Operator is in breach of their license. All disputes with an Operator about a payout, a blocked account, a delay, broken features and so on, should first be taken up directly with the Operator. If no resolution is found there are a number of independent bodies you can contact, which should be listed on the Operator website.
+        If, however, the complaint relates to an Operator breaching their license, you can contact Anjouan Licensing Services Inc. directly via their Player Support channel or via the "File a Complaint" button below. You must include all the details of your grievance so they can investigate fully. All disputes must be recorded in writing via email so the complaint is correctly recorded.
+        </div>
+        <div class="action">
+          <button class="btn btn-small yellow-button expandable-toggle-action" onclick="showComplainForm(this, event)">
+            <span class="text">File a Complaint</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="complaint-form-container" style="display:none" class="expandable-toggle">
+      <h3>File a complaint</h3>
+      <p>
+      If you are a client of Vanta Technology LTD and are experiencing issues, please file a complaint in English below. <br> Only complaints submitted in English will be reviewed.
+      </p>
+      <form action="../../../../../../../../validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/contact.html.html_with_files" method="POST" enctype="multipart/form-data" class="complaint-form" id="complaint-form">
+        <div>
+          <p class="p-as-label">Name <span class="text-danger">*</span></p>
+
+          <label class="label-as-p-description">First</label>
+          <input class="form-control" type="text" name="first-name" placeholder="" required>
+
+          <label class="label-as-p-description">Last</label>
+          <input class="form-control" type="text" name="last-name" placeholder="" required>
+        </div>
+        <div>
+          <label>Email <span class="text-danger">*</span></label>
+          <input class="form-control" type="email" name="email" placeholder="" required>
+        </div>
+        <div>
+          <label>Phone <span class="text-danger">*</span></label>
+          <div class="intl-tel-input">
+            <input class="form-control" type="tel" name="phone" id="phone" placeholder="" required>
+            <div id="phone-error" class="intl-tel-input-no-error">Invalid phone number</div>
+          </div>
+        </div>
+        <div>
+          <p class="p-as-label">Address <span class="text-danger">*</span></p>
+
+          <label class="label-as-p-description">Address Line 1</label>
+          <input class="form-control" type="text" name="address-line-one" placeholder="" required>
+
+          <label class="label-as-p-description">Address Line 2</label>
+          <input class="form-control" type="text" name="address-line-two" placeholder="">
+
+          <label class="label-as-p-description">City</label>
+          <input class="form-control" type="text" name="city" placeholder="" required>
+
+          <label class="label-as-p-description">State / Province / Region</label>
+          <input class="form-control" type="text" name="region" placeholder="" required>
+
+          <label class="label-as-p-description">Postal Code</label>
+          <input class="form-control" type="text" name="postal-code" placeholder="" required>
+
+          <label class="label-as-p-description">Country</label>
+          <select class="form-control" name="country" id="country" required>
+            <option value="" selected disabled>-- Select a Country --</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+              <option value="Bonaire, Saint Eustatius and Saba">Bonaire, Saint Eustatius and Saba</option>
+              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Bouvet Island">Bouvet Island</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Brunei Darussalam">Brunei Darussalam</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Curaçao">Curaçao</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Côte d&#x27;Ivoire">Côte d&#x27;Ivoire</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="England">England</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Territories">French Southern Territories</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+              <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, Democratic People&#x27;s Republic of">Korea, Democratic People&#x27;s Republic of</option>
+              <option value="Korea, Republic of">Korea, Republic of</option>
+              <option value="Kosovo">Kosovo</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Lao People&#x27;s Democratic Republic">Lao People&#x27;s Democratic Republic</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libya">Libya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macao">Macao</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+              <option value="Moldova, Republic of">Moldova, Republic of</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="North Macedonia">North Macedonia</option>
+              <option value="Northern Ireland">Northern Ireland</option>
+              <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Palestine">Palestine</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Pitcairn">Pitcairn</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Romania">Romania</option>
+              <option value="Russian Federation">Russian Federation</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Réunion">Réunion</option>
+              <option value="Saint Barthélemy">Saint Barthélemy</option>
+              <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Martin">Saint Martin</option>
+              <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+              <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Scotland">Scotland</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+              <option value="South Sudan">South Sudan</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+              <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-Leste">Timor-Leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="US Minor Outlying Islands">US Minor Outlying Islands</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Virgin Islands, British">Virgin Islands, British</option>
+              <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+              <option value="Wales">Wales</option>
+              <option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+              <option value="Åland Islands">Åland Islands</option>
+          </select>
+        </div>
+
+        <label class="label-with-description">Date of Birth</label>
+        <p class="label-description">Enter your date of birth</p>
+        <input data-provide="datepicker" data-date-format="yyyy-mm-dd" name="birth-date">
+
+        <label class="label-with-description">Operator Website / URL <span class="text-danger">*</span></label>
+        <p class="label-description">Enter the operator's websites</p>
+        <input class="form-control" type="url" name="operator-url" placeholder="" required>
+
+        <label class="label-with-description">Amount Disputed <span class="text-danger">*</span></label>
+        <p class="label-description">Enter the amount disputed</p>
+        <input class="form-control" type="number" name="disputed-amount" placeholder="" required>
+
+        <label>Games Played <span class="text-danger">*</span></label>
+        <textarea class="form-control" rows="3" name="played-games" placeholder="" minlength="10" required></textarea>
+
+        <label class="label-with-description">Details of Dispute <span class="text-danger">*</span></label>
+        <p class="label-description">Please include as much detail as possible</p>
+        <textarea class="form-control" rows="3" name="dispute-details" placeholder="" minlength="10" required></textarea>
+
+        <div>
+          <p class="p-as-label">Date / Time of Play <span class="text-danger">*</span></p>
+          <p class="label-description">Date and Time of incident</p>
+
+          <label class="label-as-p-description">Date</label>
+          <input data-provide="datepicker" data-date-format="yyyy-mm-dd" name="play-date" placeholder="" required>
+
+          <label class="label-as-p-description">Time</label>
+          <input class="form-control" type="text" name="play-time" id="play-time" placeholder="" required>
+        </div>
+
+        <div id="screen-captures-and-chats">
+          <input type="file" name="screen-captures-and-chats" class="drop-file-input"
+             accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.webp,.avif,.ico,.heic,.heif,.heics,.heifs,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.css,.vtt,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.pdf,.class,.tar,.zip,.gz,.gzip,.rar,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages" 
+             data-max-count="5" 
+             data-max-size="1" 
+             multiple 
+             required  />
+          <label class="label-with-description">Upload Any Copies of Screen Captures and Chats <span class="text-danger">*</span></label>
+            <p class="label-description">Upload any copies of screen captures and chats that support your claim.</p>
+          <div class="drop-file">
+            <div class="drop-file-area">
+              <span style="display: block" class='icon'>&#xe023;</span>
+              <span style="display: block" class='text'>Drop your files here or browse files.</span>
+            </div>
+            <div class="file-info"></div>
+          </div>
+        </div>
+        
+
+        <div id="photo-id">
+          <input type="file" name="photo-id" class="drop-file-input"
+             accept=".pdf,.jpg,.gif" 
+             data-max-count="1" 
+             data-max-size="1" 
+            
+             required  />
+          <label class="label-with-description">Government Issued Photo ID <span class="text-danger">*</span></label>
+            <p class="label-description">Upload a recently certified copy of your photo id.</p>
+          <div class="drop-file">
+            <div class="drop-file-area">
+              <span style="display: block" class='icon'>&#xe023;</span>
+              <span style="display: block" class='text'>Drop your files here or browse files.</span>
+            </div>
+            <div class="file-info"></div>
+          </div>
+        </div>
+        
+
+        <div id="home-address-proof">
+          <input type="file" name="home-address-proof" class="drop-file-input"
+             accept=".pdf,.jpg" 
+             data-max-count="1" 
+             data-max-size="1" 
+            
+             required  />
+          <label class="label-with-description">Proof of Home Address <span class="text-danger">*</span></label>
+            <p class="label-description">Upload a recently issued utility bill in your name showing your home address.</p>
+          <div class="drop-file">
+            <div class="drop-file-area">
+              <span style="display: block" class='icon'>&#xe023;</span>
+              <span style="display: block" class='text'>Drop your files here or browse files.</span>
+            </div>
+            <div class="file-info"></div>
+          </div>
+        </div>
+        
+
+        <div id="funds-source-proof">
+          <input type="file" name="funds-source-proof" class="drop-file-input"
+             accept=".pdf,.jpg" 
+             data-max-count="1" 
+             data-max-size="1" 
+            
+             required  />
+          <label class="label-with-description">Please upload your proof of source of funds <span class="text-danger">*</span></label>
+            <p class="label-description">Please upload your proof of source of funds.</p>
+          <div class="drop-file">
+            <div class="drop-file-area">
+              <span style="display: block" class='icon'>&#xe023;</span>
+              <span style="display: block" class='text'>Drop your files here or browse files.</span>
+            </div>
+            <div class="file-info"></div>
+          </div>
+        </div>
+        
+
+        <p>
+          <div>Before sending this Complaint, please read Anjouan Licensing Services Inc.'s <a rel="noopener noreferrer" target="_blank" href="https://anjouangaming.com/dispute-terms-conditions/">Dispute Terms and Conditions</a>.</div>
+          <input type="checkbox" required class="agree-checkbox">I agree with Anjouan Licensing Services Inc.'s Dispute Terms and Conditions.
+        </p>
+        <div id="captcha-validation">
+          You need to click the CAPTCHA checkbox before submitting the form
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LcZC5opAAAAAAawyI7dk14BO6ZuGimvC_sB4uFw"></div>
+
+        <button name="save" type="submit" class="yellow-button">
+          <span class='icon'>&#xe003;</span><span class='text'>Send</span>
+        </button>
+      </form>
+    </div>
+    <div id="form-overlay">
+      <div id="loading-container">
+        <div class="icon"></div>
+        <div class="text">Sending...</div>
+      </div>
+      <div id="success-message">
+        <div class="icon">&#xe00d;</div>
+        <div class="text">Message sent.</div>
+      </div>
+      <div id="error-message">
+        <div class="icon">&#xe00c;</div>
+        <div class="text">We cannot deliver your message right now.<br> Please, try again later.</div>
+      </div>
+    </div>
+    <script type="application/javascript">
+      let resizeObservable = new ResizeObserver(function(el) {
+        if (el) {
+          const iframe = parent.document.getElementById('complaint-frame');
+          var innerDocBody = iframe.contentWindow.document.body;
+          iframe.style.height = innerDocBody.offsetHeight + 'px';
+        }
+      });
+      let complaintEl = document.querySelector('.complaint-body');
+      resizeObservable.observe(complaintEl);
+      window.addEventListener('pagehide', function() {
+        resizeObservable.disconnect();
+      });
+
+      function showComplainForm(element, event) {
+        event.preventDefault();
+        var el = document.getElementById("complaint-form-container");
+        if (el.style.display === "none") {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+      }
+
+      $(document).ready(function() {
+        // TODO: This is copy/pasted from site.js
+        // Send form via ajax
+        $('form').submit(function(event) {
+          const isPhoneFieldValid = validatePhone(iti);
+          if (!isPhoneFieldValid) {
+            document.getElementById('phone').scrollIntoView();
+            event.preventDefault();
+            return;
+          }
+
+          if (grecaptcha.getResponse() === '') {
+            $("#captcha-validation").show();
+          } else {
+            $("#captcha-validation").hide();
+            $("input, textarea").prop('disabled', true).addClass('disabled');
+
+            $('div#loading-container').css("display",'flex');
+            $('div#form-overlay').fadeIn(200);
+            $('#complaint-form-container').css("display","none");
+            $('#complaint-explanation-container').css("display","none");
+
+            const iframe = parent.document.getElementById('complaint-frame')
+            iframe.scrollIntoView();
+
+            const formData = new FormData();
+            formData.append('firstName', $('[name="first-name"]').val());
+            formData.append('lastName', $('[name="last-name"]').val());
+            formData.append('email', $('[name="email"]').val());
+            formData.append('phone', iti.getNumber());
+            formData.append('addressLineOne', $('[name="address-line-one"]').val());
+            formData.append('addressLineTwo', $('[name="address-line-two"]').val());
+            formData.append('city', $('[name="city"]').val());
+            formData.append('region', $('[name="region"]').val());
+            formData.append('postalCode', $('[name="postal-code"]').val());
+            formData.append('country', $('[name="country"]').val());
+            formData.append('birthDate', $('[name="birth-date"]').val());
+            formData.append('operatorUrl', $('[name="operator-url"]').val());
+            formData.append('disputedAmount', $('[name="disputed-amount"]').val());
+            formData.append('playedGames', $('[name="played-games"]').val());
+            formData.append('disputeDetails', $('[name="dispute-details"]').val());
+            formData.append('playDate', $('[name="play-date"]').val());
+            formData.append('playTime', $('[name="play-time"]').val());
+            formData.append('captcha', grecaptcha.getResponse());
+            formData.append('mailSubject', `New Complaint Received - ${$('[name="first-name"]').val()} ${$('[name="last-name"]').val()}`);
+
+            const screenCapturesAndChats = $('[name="screen-captures-and-chats"]')[0].files;
+            const screenCapturesAndChatsFilesNames = [];
+            for (let i = 0; i < screenCapturesAndChats.length; i++) {
+              // The name of the appended file to the first dash should be the sane as the key in the 'mapObj' without FilesNames
+              // so this field 'screenCapturesAndChats-$...' should be screenCapturesAndChatsFilesNames in the 'mapObj'
+              formData.append(`screenCapturesAndChats-${screenCapturesAndChats[i]['name']}`, screenCapturesAndChats[i]);
+              screenCapturesAndChatsFilesNames.push(`screenCapturesAndChats-${screenCapturesAndChats[i]['name']}`);
+            }
+            formData.append('screenCapturesAndChatsFilesNames', screenCapturesAndChatsFilesNames.join(', '));
+
+            const photoId = $('[name="photo-id"]')[0].files;
+            const photoIdFilesNames = [];
+            for (let i = 0; i < photoId.length; i++) {
+              formData.append(`photoId-${photoId[i]['name']}`, photoId[i]);
+              photoIdFilesNames.push(`photoId-${photoId[i]['name']}`);
+            }
+            formData.append('photoIdFilesNames', photoIdFilesNames.join(', '));
+
+            const homeAddressProof = $('[name="home-address-proof"]')[0].files;
+            const homeAddressProofFilesNames = [];
+            for (let i = 0; i < homeAddressProof.length; i++) {
+              formData.append(`homeAddressProof-${homeAddressProof[i]['name']}`, homeAddressProof[i]);
+              homeAddressProofFilesNames.push(`homeAddressProof-${homeAddressProof[i]['name']}`);
+            }
+            formData.append('homeAddressProofFilesNames', homeAddressProofFilesNames.join(', '));
+
+            const fundsSourceProof = $('[name="funds-source-proof"]')[0].files;
+            const fundsSourceProofFilesNames = [];
+            for (let i = 0; i < fundsSourceProof.length; i++) {
+              formData.append(`fundsSourceProof-${fundsSourceProof[i]['name']}`, fundsSourceProof[i]);
+              fundsSourceProofFilesNames.push(`fundsSourceProof-${fundsSourceProof[i]['name']}`);
+            }
+            formData.append('fundsSourceProofFilesNames', fundsSourceProofFilesNames.join(', '));
+
+            $.ajax({
+                url: $(this).attr('action'), // sumbits it to the given url of the form
+                method: 'post',
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function(){
+                $('div#success-message').css("display","flex");
+            }).fail(function() {
+                $('div#error-message').css("display","flex");
+            }).always(function() {
+                // remove loading-container if either success or error callback is received
+                $('div#loading-container').css("display",'none');
+            });
+          }
+
+          return false;
+        });
+
+        $(document).on("click", '.generate-form-action', function() {
+          var apiUrl  =document.location.origin+'/generate';
+          $.ajax({
+              url: '/generate',
+              method: 'post'
+          }).done(function(data){
+            window.open(data.url);
+          }).fail(function() {
+            console.log('Cannot open page');
+          }).always(function() {
+
+          });
+          return false;
+        });
+
+        const phoneInput = document.querySelector("#phone");
+        const iti = window.intlTelInput(phoneInput, {
+          initialCountry: "gb",
+          utilsScript: "../../../../assets/external/utils.js"
+        });
+        phoneInput.addEventListener('blur', () => validatePhone(iti));
+
+        $('#play-time').timepicker({
+          timeFormat: 'h:i A',
+          interval: 30,
+          dropdown: true,
+          scrollbar: true
+        });
+
+        setDropFile('screen-captures-and-chats');
+        setDropFile('photo-id');
+        setDropFile('home-address-proof');
+        setDropFile('funds-source-proof');
+
+        function setDropFile(dropFileName) {
+          const dropFileContainer = document.getElementById(dropFileName);
+          const dropFile = dropFileContainer.getElementsByClassName('drop-file')[0];
+          const filesInfo = dropFileContainer.getElementsByClassName('file-info')[0];
+          const inputFile = dropFileContainer.getElementsByTagName('input')[0];
+
+          const uploadedFiles = [];
+
+          dropFile.addEventListener('click', () => inputFile.click())
+          inputFile.addEventListener('click', () => removeErrorFilesFromFilesListing(dropFile));
+          inputFile.addEventListener('change', () => handChangeEvent(inputFile, filesInfo, dropFile, uploadedFiles));
+
+          dropFile.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropFile.classList.add('drop-file-focus');
+            removeErrorFilesFromFilesListing(dropFile);
+          });
+
+          dropFile.addEventListener('dragleave', () => {
+            dropFile.classList.remove('drop-file-focus');
+          });
+
+          dropFile.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropFile.classList.remove('drop-file-focus');
+            inputFile.files = e.dataTransfer.files;
+            inputFile.dispatchEvent(new Event('change'));
+          });
+
+        }
+
+        function handChangeEvent(inputFile, filesInfo, dropFile, uploadedFiles) {
+          const filesData = [];
+          for (const file of inputFile.files) {
+            const fileErrorMessage = validateFile(file, inputFile, uploadedFiles);
+            const fileWrapper = {
+              file: file,
+              sizeInMB: (file.size / (1024 * 1024)).toFixed(2),
+              errorMessage: fileErrorMessage
+            };
+            filesData.push(fileWrapper);
+            if (fileErrorMessage) {
+              continue;
+            }
+            uploadedFiles.push(file);
+          }
+
+          for (let i = 0; i < filesData.length; i++) {
+            if (filesInfo.children.length > 0 && i === 0) {
+              const separatorElement = document.createElement("div");
+              separatorElement.classList.add('drop-file-separator');
+              filesInfo.appendChild(separatorElement);
+            }
+
+            const spanInfoElement = document.createElement("span");
+            spanInfoElement.classList.add('drop-file-listed-item');
+            spanInfoElement.textContent = `${filesData[i].file.name} - ${filesData[i].sizeInMB} MB`;
+
+            const spanCloseIconElement = document.createElement("span");
+            spanCloseIconElement.classList.add('drop-file-close-icon');
+            spanCloseIconElement.innerHTML = '&#xf00d;';
+
+            const divElement = document.createElement("div");
+            divElement.classList.add('drop-file-listing');
+            divElement.appendChild(spanInfoElement);
+            divElement.appendChild(spanCloseIconElement);
+
+            if (filesData[i].errorMessage) {
+              spanCloseIconElement.classList.add('drop-file-error-color');
+
+              const errorDivElement = document.createElement("div");
+              errorDivElement.classList.add('drop-file-error-color');
+              errorDivElement.classList.add('drop-file-listed-item');
+              errorDivElement.textContent = filesData[i].errorMessage;
+
+              const errorDivContainer = document.createElement("div");
+              errorDivContainer.classList.add('drop-file-error');
+
+              errorDivContainer.appendChild(divElement);
+              errorDivContainer.appendChild(errorDivElement);
+              filesInfo.appendChild(errorDivContainer);
+
+              spanCloseIconElement.addEventListener('click', (e) => handleErrorFileRemove(e));
+            } else {
+              filesInfo.appendChild(divElement);
+
+              spanCloseIconElement.addEventListener('click', (e) => handleFileRemove(
+                e,
+                filesData[i].file,
+                inputFile,
+                dropFile,
+                uploadedFiles
+              ));
+            }
+
+            if (i < filesData.length - 1) {
+              const separatorElement = document.createElement("div");
+              separatorElement.classList.add('drop-file-separator');
+              filesInfo.appendChild(separatorElement);
+            }
+          }
+
+          const newDataTransfer = new DataTransfer();
+          uploadedFiles.forEach(file => newDataTransfer.items.add(file));
+          inputFile.files = newDataTransfer.files;
+        }
+
+        function validateFile(file, inputFile, uploadedFiles) {
+          const uniqueFileName = validateNonRepetitiveFiles(file, uploadedFiles);
+          if (!uniqueFileName) {
+            return 'Not Uploaded: A file with the same name is already uploaded.';
+          }
+
+          const acceptedFileTypesAttribute = inputFile.getAttribute('accept');
+          if (acceptedFileTypesAttribute) {
+            const acceptedFileTypes = acceptedFileTypesAttribute.split(',');
+            const isFileValid = validateFileType(file, acceptedFileTypes);
+            if (!isFileValid) {
+              return `Not Uploaded: The file type is not valid. Accepted file types are ${acceptedFileTypesAttribute}.`;
+            }
+          }
+
+          const maxFileSizeAttribute = inputFile.getAttribute('data-max-size');
+          if (maxFileSizeAttribute) {
+            const maxFileSize = parseInt(maxFileSizeAttribute);
+            const isFileValid = validationFileSize(file, maxFileSize);
+            if (!isFileValid) {
+              return `Not Uploaded: The file is too big. A file should be no more than ${maxFileSize} MB in size.`;
+            }
+          }
+
+          const maxFilesCountAttribute = inputFile.getAttribute('data-max-count');
+          if (maxFilesCountAttribute) {
+            const maxFilesCount = parseInt(maxFilesCountAttribute);
+            const isFileValid = validateFilesCount(uploadedFiles, maxFilesCount);
+            if (!isFileValid) {
+              return `Not Uploaded: You can upload up to ${maxFilesCount} files.`;
+            }
+          }
+        }
+
+        function validateNonRepetitiveFiles(file, uploadedFiles) {
+          return !uploadedFiles.some(uploadedFile => uploadedFile.name === file.name);
+        }
+        function validateFileType(file, acceptedFileTypes) {
+          return acceptedFileTypes.some(type => file.name.endsWith(type.trim()) || file.type === type.trim());
+        }
+        function validationFileSize(file, maxFileSize) {
+          return file.size <= maxFileSize * 1024 * 1024;
+        }
+        function validateFilesCount(uploadedFiles, maxFilesCount) {
+          return uploadedFiles.length < maxFilesCount;
+        }
+
+        function handleFileRemove(event, file, inputFile, dropFile, uploadedFiles) {
+          event.stopPropagation();
+          removeErrorFilesFromFilesListing(dropFile);
+          const index = uploadedFiles.indexOf(file);
+          if (index > -1) {
+            uploadedFiles.splice(index, 1);
+            const newDataTransfer = new DataTransfer();
+            uploadedFiles.forEach(f => newDataTransfer.items.add(f));
+            inputFile.files = newDataTransfer.files;
+          }
+          const fileFromListing = event.target.parentElement;
+          removeItemFromFileListing(fileFromListing);
+        }
+
+        function handleErrorFileRemove(event) {
+          event.stopPropagation();
+          const errorFile = event.target.parentElement.parentElement;
+          removeItemFromFileListing(errorFile);
+        }
+
+        function removeErrorFilesFromFilesListing(dropFile) {
+          const errorFiles = dropFile.querySelectorAll('.drop-file-error');
+          errorFiles.forEach(errorFile => removeItemFromFileListing(errorFile));
+        }
+
+        function removeItemFromFileListing(file) {
+          const nextSeparator = file.nextElementSibling;
+          const previousSeparator = file.previousElementSibling;
+          if (nextSeparator) {
+            nextSeparator.remove();
+          } else if (previousSeparator) {
+            previousSeparator.remove();
+          }
+          file.remove();
+        }
+
+        function validatePhone(iti) {
+          const phoneErrorDiv = document.getElementById('phone-error');
+          const isValidNumber = iti.isValidNumber();
+          if (!isValidNumber) {
+            phoneErrorDiv.classList.remove('intl-tel-input-no-error');
+            phoneErrorDiv.classList.add('intl-tel-input-error');
+          } else {
+            phoneErrorDiv.classList.remove('intl-tel-input-error');
+            phoneErrorDiv.classList.add('intl-tel-input-no-error');
+          }
+          return isValidNumber;
+        }
+      });
+    </script>
+  </body>
+</html>
