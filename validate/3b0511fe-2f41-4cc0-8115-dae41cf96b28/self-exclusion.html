@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Self exclusion form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=../../assets/validator/bootstrap.min.css type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/validator/datepicker/bootstrap-datepicker3.standalone.min.css" type="text/css">
-    <link rel="stylesheet" href="../../assets/validator/datepicker/datepicker-custom.css" type="text/css">
-    <link href="../../assets/validator/validator.css" type="text/css" rel="stylesheet">
-    <script src="../../assets/validator/jquery.min.js"></script>
-    <script src="../../assets/validator/datepicker/bootstrap-datepicker.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body class="self-exclusion-body" >
-    <div id="self-exclusion-explanation-container" style="display: flex;">
-      <div style="flex-grow:1;">
-        <h3>Self Exclusion</h3>
-        <div class="details" style="border-left: 1px #e1e5e8 solid;padding-left: 5px">
-          Anjouan Gaming shall treat the information received in this Section as confidential and such information shall not be
-          disclosed, except to the Gaming Facility Operator for inclusion on their lists, or to appropriate law enforcement
-          agencies, if needed, in the conduct of an official investigation or unless ordered by a court of competent
-          jurisdiction. This list will be distributed only to Gaming Facility Operators that are part of the Anjouan Gaming platform and therefore, the exclusion will be forced only on them.
-        </div>
-        <div class="action">
-          <button class="btn btn-small yellow-button expandable-toggle-action" onclick="showSelfExclusionForm(this, event)">
-            <span class="text">Request Self Exclusion</span>
-          </button>
-        </div>
+
+<head>
+  <title>Self exclusion form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=../../assets/validator/bootstrap.min.css type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/validator/datepicker/bootstrap-datepicker3.standalone.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="../../assets/validator/datepicker/datepicker-custom.css" type="text/css">
+  <link href="../../assets/validator/validator.css" type="text/css" rel="stylesheet">
+  <script src="../../assets/validator/jquery.min.js"></script>
+  <script src="../../assets/validator/datepicker/bootstrap-datepicker.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body class="self-exclusion-body">
+  <div id="self-exclusion-explanation-container" style="display: flex;">
+    <div style="flex-grow:1;">
+      <h3>Self Exclusion</h3>
+      <div class="details" style="border-left: 1px #e1e5e8 solid;padding-left: 5px">
+        Anjouan Gaming shall treat the information received in this Section as confidential and such information shall
+        not be
+        disclosed, except to the Gaming Facility Operator for inclusion on their lists, or to appropriate law
+        enforcement
+        agencies, if needed, in the conduct of an official investigation or unless ordered by a court of competent
+        jurisdiction. This list will be distributed only to Gaming Facility Operators that are part of the Anjouan
+        Gaming platform and therefore, the exclusion will be forced only on them.
+      </div>
+      <div class="action">
+        <button class="btn btn-small yellow-button expandable-toggle-action"
+          onclick="showSelfExclusionForm(this, event)">
+          <span class="text">Request Self Exclusion</span>
+        </button>
       </div>
     </div>
+  </div>
 
-    <div id="self-exclusion-form-container" style="display:none" class="expandable-toggle">
-      <h3>Self exclude</h3>
-      <p>
-        The self exclusion process should only be completed by the person seeking to exclude themselves from the participating Gaming websites. Applying in the name of another person is prohibited. I acknowledge that I am a problem gambler and voluntarily seek to exclude myself from all online casinos participating in the Self-Exclusion program. I hereby request and authorise Anjouan Gaming to place my name on the list of self-excluded people, fully understanding that once the application is completed it cannot be revoked. I wish to be excluded for the length of time I have indicated below. I have also reviewed and understand the terms and restrictions of this self-exclusion and agree to all of them.
-      </p>
+  <div id="self-exclusion-form-container" style="display:none" class="expandable-toggle">
+    <h3>Self exclude</h3>
+    <p>
+      The self exclusion process should only be completed by the person seeking to exclude themselves from the
+      participating Gaming websites. Applying in the name of another person is prohibited. I acknowledge that I am a
+      problem gambler and voluntarily seek to exclude myself from all online casinos participating in the Self-Exclusion
+      program. I hereby request and authorise Anjouan Gaming to place my name on the list of self-excluded people, fully
+      understanding that once the application is completed it cannot be revoked. I wish to be excluded for the length of
+      time I have indicated below. I have also reviewed and understand the terms and restrictions of this self-exclusion
+      and agree to all of them.
+    </p>
 
-      <p>Any fields marked with * and in red are mandatory for the self-exclusion to be processed. You are encouraged to provide as much additional information as possible to help the licensed operators identify you. This will help to ensure that you are excluded from the correct operator. If you have any questions about the self-exclusion process, please contact Anjouan Gaming.</p>
+    <p>Any fields marked with * and in red are mandatory for the self-exclusion to be processed. You are encouraged to
+      provide as much additional information as possible to help the licensed operators identify you. This will help to
+      ensure that you are excluded from the correct operator. If you have any questions about the self-exclusion
+      process, please contact Anjouan Gaming.</p>
 
-      <form action="/validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/self-exclusion" method="POST" class="self-exclusion-form" id="self-exclusion-form">
-        <div style="display: none">
-          <input id="input-public-company-name" type="hidden" name="company" value="Vanta Technology LTD"></input>
-          <input class="input-domains" type="hidden" name="domains[]" value="casimost.com"></input>
-        </div>
-        <div>
+    <form action="/validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/self-exclusion" method="POST"
+      class="self-exclusion-form" id="self-exclusion-form">
+      <div style="display: none">
+        <input id="input-public-company-name" type="hidden" name="company" value="RE Clean Money B.V."></input>
+        <input class="input-domains" type="hidden" name="domains[]" value="betpro301.com"></input>
+      </div>
+      <div>
 
 
         <label class="text-danger">First name *</label>
@@ -59,9 +76,10 @@
         </select>
 
         <div id="other-names" style="display: none;">
-        <label>If yes, please specify</label>
-        <input class="form-control" type="text" name="other-name-1" placeholder="Alternative Name">
-        <button id="add-other-name-button" class="btn yellow-button standalone-button" type="button">Add another name</button>
+          <label>If yes, please specify</label>
+          <input class="form-control" type="text" name="other-name-1" placeholder="Alternative Name">
+          <button id="add-other-name-button" class="btn yellow-button standalone-button" type="button">Add another
+            name</button>
         </div>
 
         <label class="text-danger">Birth date *</label>
@@ -89,301 +107,308 @@
 
         <label class="text-danger">E-mail *</label>
         <input class="form-control" type="email" name="email-1" required>
-        <button id="add-email-button" class="btn yellow-button standalone-button" type="button">Add another e-mail</button>
+        <button id="add-email-button" class="btn yellow-button standalone-button" type="button">Add another
+          e-mail</button>
 
         <label>Login username/ID</label>
         <input class="form-control" type="text" name="login-id-1">
-        <button id="add-login-id-button"class="btn yellow-button standalone-button" type="button">Add another login username/ID</button>
+        <button id="add-login-id-button" class="btn yellow-button standalone-button" type="button">Add another login
+          username/ID</button>
 
         <label class="label-with-description">Identification number</label>
-        <p class="label-description">Social Security Number (SSN), National Identification Number, or any other government-issued ID number</p>
+        <p class="label-description">Social Security Number (SSN), National Identification Number, or any other
+          government-issued ID number</p>
         <input class="form-control" type="text" name="identification-number-1">
-        <button id="add-identification-number-button" class="btn yellow-button standalone-button" type="button">Add another identification number</button>
+        <button id="add-identification-number-button" class="btn yellow-button standalone-button" type="button">Add
+          another identification number</button>
 
         <label>Phone</label>
         <p class="label-description">Please include country code starting with the + sign. E.g. +1 123 456 7890</p>
         <input class="form-control" type="tel" name="phone-1" pattern="\+[0-9\-\.\s]*">
-        <button id="add-phone-button" class="btn yellow-button standalone-button" type="button">Add another phone</button>
+        <button id="add-phone-button" class="btn yellow-button standalone-button" type="button">Add another
+          phone</button>
 
+      </div>
+      <p style="margin: 0; padding: 0;">
+        <input type="checkbox" required class="agree-checkbox" name='personal-account'>I acknowledge this is my account.
+      </p>
+      <div>
+        <label>Period</label>
+        <div class="select-wrapper">
+          <select class="form-control" name="period" required>
+            <option value="2 cool off">2 day cool off</option>
+            <option value="7 cool off">1 week cool off</option>
+            <option value="30 exclusion">1 month exclusion</option>
+            <option value="60 exclusion">2 month exclusion</option>
+            <option value="90 exclusion">3 month exclusion</option>
+            <option value="180 exclusion">6 month exclusion</option>
+            <option value="360 exclusion">1 year exclusion</option>
+            <option value="36000">Permanent</option>
+          </select>
         </div>
-        <p style="margin: 0; padding: 0;">
-          <input type="checkbox" required class="agree-checkbox" name='personal-account'>I acknowledge this is my account.
-        </p>
-        <div>
-          <label>Period</label>
-          <div class="select-wrapper">
-            <select class="form-control" name="period" required>
-              <option value="2 cool off">2 day cool off</option>
-              <option value="7 cool off">1 week cool off</option>
-              <option value="30 exclusion">1 month exclusion</option>
-              <option value="60 exclusion">2 month exclusion</option>
-              <option value="90 exclusion">3 month exclusion</option>
-              <option value="180 exclusion">6 month exclusion</option>
-              <option value="360 exclusion">1 year exclusion</option>
-              <option value="36000">Permanent</option>
-            </select>
-          </div>
-        </div>
-        <div id="captcha-validation">
-          You need to click the CAPTCHA checkbox before submitting the form
-        </div>
-        <div class="g-recaptcha" data-sitekey="6LcZC5opAAAAAAawyI7dk14BO6ZuGimvC_sB4uFw"></div>
+      </div>
+      <div id="captcha-validation">
+        You need to click the CAPTCHA checkbox before submitting the form
+      </div>
+      <div class="g-recaptcha" data-sitekey="6Lekn0EsAAAAAAVcw_qkbC3ldreh81JSaCn359RM"></div>
 
-        <button name="save" type="submit" class="yellow-button send">
-          <span class='icon'>&#xe003;</span><span class='text'>Send</span>
-        </button>
-      </form>
+      <button name="save" type="submit" class="yellow-button send">
+        <span class='icon'>&#xe003;</span><span class='text'>Send</span>
+      </button>
+    </form>
+  </div>
+  <div id="form-overlay">
+    <div id="loading-container">
+      <img class="icon" src=../../assets/validator/spinner-light.gif>
+      <div class="text">Processing...</div>
     </div>
-    <div id="form-overlay">
-      <div id="loading-container">
-        <img class="icon" src=../../assets/validator/spinner-light.gif>
-        <div class="text">Processing...</div>
-      </div>
-      <div id="success-message">
-        <div class="icon">&#xe00d;</div>
-        <div class="text">Self-exclusion request has been processed successfully.</div>
-      </div>
-      <div id="error-message">
-        <div class="icon">&#xe00c;</div>
-        <div class="text">An unexpected error occurred and we could not process your self-exclusion request.<br> Please, try again later.</div>
-      </div>
+    <div id="success-message">
+      <div class="icon">&#xe00d;</div>
+      <div class="text">Self-exclusion request has been processed successfully.</div>
     </div>
+    <div id="error-message">
+      <div class="icon">&#xe00c;</div>
+      <div class="text">An unexpected error occurred and we could not process your self-exclusion request.<br> Please,
+        try again later.</div>
+    </div>
+  </div>
 
-    <script type="application/javascript">
-      let resizeObservable = new ResizeObserver(function(el) {
-        if (el) {
-          const iframe = parent.document.getElementById('self-exclusion-frame');
-          var innerDocBody = iframe.contentWindow.document.body;
-          iframe.style.height = innerDocBody.offsetHeight + 'px';
-        }
-      });
-      let selfExclusionEl = document.querySelector('.self-exclusion-body');
-      resizeObservable.observe(selfExclusionEl);
-      window.addEventListener('pagehide', function() {
-        resizeObservable.disconnect();
-      });
-
-      function showSelfExclusionForm(element, event) {
-        event.preventDefault();
-        var el = document.getElementById("self-exclusion-form-container");
-        if (el.style.display === "none") {
-            el.style.display = "block";
-            $("#form-overlay").hide();
-        } else {
-            el.style.display = "none";
-        }
+  <script type="application/javascript">
+    let resizeObservable = new ResizeObserver(function (el) {
+      if (el) {
+        const iframe = parent.document.getElementById('self-exclusion-frame');
+        var innerDocBody = iframe.contentWindow.document.body;
+        iframe.style.height = innerDocBody.offsetHeight + 'px';
       }
+    });
+    let selfExclusionEl = document.querySelector('.self-exclusion-body');
+    resizeObservable.observe(selfExclusionEl);
+    window.addEventListener('pagehide', function () {
+      resizeObservable.disconnect();
+    });
 
-      let loginIdCounter = 1;
-      let identificationNumberCounter = 1;
-      let otherNameCounter = 0;
-      let otherNameCounterMem = 1;
-      let emailCounter = 1;
-      let phoneCounter = 1;
+    function showSelfExclusionForm(element, event) {
+      event.preventDefault();
+      var el = document.getElementById("self-exclusion-form-container");
+      if (el.style.display === "none") {
+        el.style.display = "block";
+        $("#form-overlay").hide();
+      } else {
+        el.style.display = "none";
+      }
+    }
 
-      $(document).ready(function() {
-        $('form').submit(function(ev) {
-          if (grecaptcha.getResponse() === '') {
-            $("#captcha-validation").show();
-          } else {
-            $("#captcha-validation").hide();
-            $("input, textarea").prop('disabled', true).addClass('disabled');
-            $('div#loading-container').css("display",'flex');
-            $('div#form-overlay').fadeIn(200);
-            $('#self-exclusion-form-container').css("display","none");
-            $('#self-exclusion-explanation-container').css("display","none");
+    let loginIdCounter = 1;
+    let identificationNumberCounter = 1;
+    let otherNameCounter = 0;
+    let otherNameCounterMem = 1;
+    let emailCounter = 1;
+    let phoneCounter = 1;
 
-            var domains = [];
-            $(".input-domains").each(function() {
-              domains.push(this.value);
-            });
+    $(document).ready(function () {
+      $('form').submit(function (ev) {
+        if (grecaptcha.getResponse() === '') {
+          $("#captcha-validation").show();
+        } else {
+          $("#captcha-validation").hide();
+          $("input, textarea").prop('disabled', true).addClass('disabled');
+          $('div#loading-container').css("display", 'flex');
+          $('div#form-overlay').fadeIn(200);
+          $('#self-exclusion-form-container').css("display", "none");
+          $('#self-exclusion-explanation-container').css("display", "none");
 
-            let accountDetails = [
-              // { type: 'loginId', value: $('[name="login-id"]').val() },
-              // { type: 'identificationNumber', value: $('[name="identification-number"]').val() },
-              { type: 'firstName', value: $('[name="first-name"]').val() },
-              { type: 'lastName', value: $('[name="last-name"]').val() },
-              { type: 'birthDate', value: $('[name="birth-date"]').val() },
-              { type: 'middleNames', value: $('[name="middle-names"]').val() },
-              { type: 'sex', value: $('[name="sex"]').val() },
-              { type: 'address', value: $('[name="address"]').val() },
-              { type: 'postCode', value: $('[name="post-code"]').val() },
-              { type: 'city', value: $('[name="city"]').val() },
-              { type: 'country', value: $('[name="country"]').val() }
-            ];
-
-//            let otherNamesVal = $('[name="other-names"]').val();
-//            let otherNames = (otherNamesVal ? otherNamesVal.split('\n') : []).map(
-//              (name) => name.trim()
-//            ).map(
-//              (name) => ({ type: 'otherNames', value: name })
-//            );
-//            if (otherNames.length > 0) {
-//              accountDetails = accountDetails.concat(otherNames);
-//            }
-
-            for (let loginId = 1; loginId <= loginIdCounter; loginId++) {
-              let loginIdVal = $('[name="login-id-' + loginId + '"]').val();
-              if (loginIdVal) {
-                accountDetails.push({ type: 'loginId', value: loginIdVal });
-              }
-            }
-
-            for (let identificationNumber = 1; identificationNumber <= identificationNumberCounter; identificationNumber++) {
-              let identificationNumberVal = $('[name="identification-number-' + identificationNumber + '"]').val();
-              if (identificationNumberVal) {
-                accountDetails.push({ type: 'identificationNumber', value: identificationNumberVal });
-              }
-            }
-
-            for (let otherName = 1; otherName <= otherNameCounter; otherName++) {
-              let otherNameVal = $('[name="other-name-' + otherName + '"]').val();
-              if (otherNameVal) {
-                accountDetails.push({ type: 'alternativeName', value: otherNameVal });
-              }
-            }
-
-            for (let email = 1; email <= emailCounter; email++) {
-              let emailVal = $('[name="email-' + email + '"]').val();
-              if (emailVal) {
-                accountDetails.push({ type: 'email', value: emailVal });
-              }
-            }
-
-            for (let phone = 1; phone <= phoneCounter; phone++) {
-              let phoneVal = $('[name="phone-' + phone + '"]').val();
-              if (phoneVal) {
-                accountDetails.push({ type: 'phone', value: phoneVal });
-              }
-            }
-//            let otherLoginIdsVal = $('[name="other-login-ids"]').val();
-//            let otherLoginIds = (otherLoginIdsVal ? otherLoginIdsVal.split('\n') : []).map(
-//              (loginId) => loginId.trim()
-//            ).map(
-//              (loginId) => ({ type: 'loginId', value: loginId })
-//            );
-//            if (otherLoginIds.length > 0) {
-//              accountDetails = accountDetails.concat(otherLoginIds);
-//            }
-
-//            let otherIdentificationNumbersVal = $('[name="other-identification-numbers"]').val();
-//            let otherIdentificationNumbers = (otherIdentificationNumbersVal ? otherIdentificationNumbersVal.split('\n') : []).map(
-//              (id) => id.trim()
-//            ).map(
-//              (id) => ({ type: 'identificationNumber', value: id })
-//            );
-//            if (otherIdentificationNumbers.length > 0) {
-//              accountDetails = accountDetails.concat(otherIdentificationNumbers);
-//            }
-            const iframe = parent.document.getElementById('self-exclusion-frame')
-            iframe.scrollIntoView();
-
-            $.ajax({
-              url: $(this).attr('action'), // submits it to the given url of the form
-              method: 'post',
-              data: {
-                accountDetails: accountDetails,
-                personalAccount: $('[name="personal-account"]').val(),
-                period: $('[name="period"]').val(),
-                company: $('#input-public-company-name').val(),
-                domains: domains,
-                captcha : grecaptcha.getResponse()
-              },
-            }).done(function(){
-                $('div#success-message').css("display","flex");
-            }).fail(function() {
-                $('div#error-message').css("display","flex");
-            }).always(function() {
-                // remove loading-container if either success or error callback is received
-                $('div#loading-container').css("display",'none');
-            });
-          }
-          return false;
-        });
-
-        $('#known-by-other-names').on('change', function() {
-          if (this.value === 'no') {
-            $('#other-names').hide();
-            otherNameCounterMem = otherNameCounter;
-            otherNameCounter = 0;
-          } else {
-            $('#other-names').show();
-            otherNameCounter = otherNameCounterMem;
-          }
-        });
-
-
-        $(document).on("click", '.generate-form-action', function () {
-          var apiUrl = document.location.origin + '/generate';
-          $.ajax({
-            url: '/generate',
-            method: 'post'
-          }).done(function (data) {
-            window.open(data.url);
-          }).fail(function () {
-            console.log('Cannot open page');
-          }).always(function () {
-
+          var domains = [];
+          $(".input-domains").each(function () {
+            domains.push(this.value);
           });
-          return false;
-        });
 
-        $("#add-login-id-button").click(function () {
-          loginIdCounter++;
-          let input = document.createElement('input');
-          input.type = 'text';
-          input.name = 'login-id-' + loginIdCounter;
-          input.className = 'form-control';
-          input.placeholder = 'Alternative login username/ID';
+          let accountDetails = [
+            // { type: 'loginId', value: $('[name="login-id"]').val() },
+            // { type: 'identificationNumber', value: $('[name="identification-number"]').val() },
+            { type: 'firstName', value: $('[name="first-name"]').val() },
+            { type: 'lastName', value: $('[name="last-name"]').val() },
+            { type: 'birthDate', value: $('[name="birth-date"]').val() },
+            { type: 'middleNames', value: $('[name="middle-names"]').val() },
+            { type: 'sex', value: $('[name="sex"]').val() },
+            { type: 'address', value: $('[name="address"]').val() },
+            { type: 'postCode', value: $('[name="post-code"]').val() },
+            { type: 'city', value: $('[name="city"]').val() },
+            { type: 'country', value: $('[name="country"]').val() }
+          ];
 
-          $(this).before(input);
-        });
+          //            let otherNamesVal = $('[name="other-names"]').val();
+          //            let otherNames = (otherNamesVal ? otherNamesVal.split('\n') : []).map(
+          //              (name) => name.trim()
+          //            ).map(
+          //              (name) => ({ type: 'otherNames', value: name })
+          //            );
+          //            if (otherNames.length > 0) {
+          //              accountDetails = accountDetails.concat(otherNames);
+          //            }
+
+          for (let loginId = 1; loginId <= loginIdCounter; loginId++) {
+            let loginIdVal = $('[name="login-id-' + loginId + '"]').val();
+            if (loginIdVal) {
+              accountDetails.push({ type: 'loginId', value: loginIdVal });
+            }
+          }
+
+          for (let identificationNumber = 1; identificationNumber <= identificationNumberCounter; identificationNumber++) {
+            let identificationNumberVal = $('[name="identification-number-' + identificationNumber + '"]').val();
+            if (identificationNumberVal) {
+              accountDetails.push({ type: 'identificationNumber', value: identificationNumberVal });
+            }
+          }
+
+          for (let otherName = 1; otherName <= otherNameCounter; otherName++) {
+            let otherNameVal = $('[name="other-name-' + otherName + '"]').val();
+            if (otherNameVal) {
+              accountDetails.push({ type: 'alternativeName', value: otherNameVal });
+            }
+          }
+
+          for (let email = 1; email <= emailCounter; email++) {
+            let emailVal = $('[name="email-' + email + '"]').val();
+            if (emailVal) {
+              accountDetails.push({ type: 'email', value: emailVal });
+            }
+          }
+
+          for (let phone = 1; phone <= phoneCounter; phone++) {
+            let phoneVal = $('[name="phone-' + phone + '"]').val();
+            if (phoneVal) {
+              accountDetails.push({ type: 'phone', value: phoneVal });
+            }
+          }
+          //            let otherLoginIdsVal = $('[name="other-login-ids"]').val();
+          //            let otherLoginIds = (otherLoginIdsVal ? otherLoginIdsVal.split('\n') : []).map(
+          //              (loginId) => loginId.trim()
+          //            ).map(
+          //              (loginId) => ({ type: 'loginId', value: loginId })
+          //            );
+          //            if (otherLoginIds.length > 0) {
+          //              accountDetails = accountDetails.concat(otherLoginIds);
+          //            }
+
+          //            let otherIdentificationNumbersVal = $('[name="other-identification-numbers"]').val();
+          //            let otherIdentificationNumbers = (otherIdentificationNumbersVal ? otherIdentificationNumbersVal.split('\n') : []).map(
+          //              (id) => id.trim()
+          //            ).map(
+          //              (id) => ({ type: 'identificationNumber', value: id })
+          //            );
+          //            if (otherIdentificationNumbers.length > 0) {
+          //              accountDetails = accountDetails.concat(otherIdentificationNumbers);
+          //            }
+          const iframe = parent.document.getElementById('self-exclusion-frame')
+          iframe.scrollIntoView();
+
+          $.ajax({
+            url: $(this).attr('action'), // submits it to the given url of the form
+            method: 'post',
+            data: {
+              accountDetails: accountDetails,
+              personalAccount: $('[name="personal-account"]').val(),
+              period: $('[name="period"]').val(),
+              company: $('#input-public-company-name').val(),
+              domains: domains,
+              captcha: grecaptcha.getResponse()
+            },
+          }).done(function () {
+            $('div#success-message').css("display", "flex");
+          }).fail(function () {
+            $('div#error-message').css("display", "flex");
+          }).always(function () {
+            // remove loading-container if either success or error callback is received
+            $('div#loading-container').css("display", 'none');
+          });
+        }
+        return false;
       });
 
-      $("#add-identification-number-button").click(function () {
-        identificationNumberCounter++;
+      $('#known-by-other-names').on('change', function () {
+        if (this.value === 'no') {
+          $('#other-names').hide();
+          otherNameCounterMem = otherNameCounter;
+          otherNameCounter = 0;
+        } else {
+          $('#other-names').show();
+          otherNameCounter = otherNameCounterMem;
+        }
+      });
+
+
+      $(document).on("click", '.generate-form-action', function () {
+        var apiUrl = document.location.origin + '/generate';
+        $.ajax({
+          url: '/generate',
+          method: 'post'
+        }).done(function (data) {
+          window.open(data.url);
+        }).fail(function () {
+          console.log('Cannot open page');
+        }).always(function () {
+
+        });
+        return false;
+      });
+
+      $("#add-login-id-button").click(function () {
+        loginIdCounter++;
         let input = document.createElement('input');
         input.type = 'text';
-        input.name = 'identification-number-' + identificationNumberCounter;
+        input.name = 'login-id-' + loginIdCounter;
         input.className = 'form-control';
-        input.placeholder = 'Other identification number';
+        input.placeholder = 'Alternative login username/ID';
 
         $(this).before(input);
       });
+    });
 
-      $("#add-other-name-button").click(function () {
-        otherNameCounter++;
-        let input = document.createElement('input');
-        input.type = 'text';
-        input.name = 'other-name-' + otherNameCounter;
-        input.className = 'form-control';
-        input.placeholder = 'Alternative Name';
+    $("#add-identification-number-button").click(function () {
+      identificationNumberCounter++;
+      let input = document.createElement('input');
+      input.type = 'text';
+      input.name = 'identification-number-' + identificationNumberCounter;
+      input.className = 'form-control';
+      input.placeholder = 'Other identification number';
 
-        $(this).before(input);
-      });
+      $(this).before(input);
+    });
 
-      $("#add-email-button").click(function () {
-        emailCounter++;
-        let input = document.createElement('input');
-        input.type = 'email';
-        input.name = 'email-' + emailCounter;
-        input.className = 'form-control';
-        input.placeholder = 'Alternative e-mail';
+    $("#add-other-name-button").click(function () {
+      otherNameCounter++;
+      let input = document.createElement('input');
+      input.type = 'text';
+      input.name = 'other-name-' + otherNameCounter;
+      input.className = 'form-control';
+      input.placeholder = 'Alternative Name';
 
-        $(this).before(input);
-      });
+      $(this).before(input);
+    });
 
-      $("#add-phone-button").click(function () {
-        phoneCounter++;
-        let input = document.createElement('input');
-        input.name = 'phone-' + phoneCounter;
-        input.className = 'form-control';
-        input.type='tel';
-        input.pattern = '\+[0-9\-\.\s]*';
-        input.placeholder = 'Alternative phone number';
+    $("#add-email-button").click(function () {
+      emailCounter++;
+      let input = document.createElement('input');
+      input.type = 'email';
+      input.name = 'email-' + emailCounter;
+      input.className = 'form-control';
+      input.placeholder = 'Alternative e-mail';
 
-        $(this).before(input);
-      });
-    </script>
-  </body>
+      $(this).before(input);
+    });
+
+    $("#add-phone-button").click(function () {
+      phoneCounter++;
+      let input = document.createElement('input');
+      input.name = 'phone-' + phoneCounter;
+      input.className = 'form-control';
+      input.type = 'tel';
+      input.pattern = '\+[0-9\-\.\s]*';
+      input.placeholder = 'Alternative phone number';
+
+      $(this).before(input);
+    });
+  </script>
+</body>
+
 </html>
