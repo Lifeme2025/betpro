@@ -24,7 +24,7 @@
       <div class="col-md-9">
         <div class="box">
           <h3>Internet Gaming License Validation</h3>
-          <div class="details subheader">This page was generated on Jan 6, 2026</div>
+          <div class="details subheader" id="generation-date">This page was generated on Jan 6, 2026</div>
           <div class="separator"></div>
           <div class="flex-row">
             <div><b>Company name</b></div>
@@ -82,7 +82,7 @@
         <iframe src="validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/self-exclusion.html" id="self-exclusion-frame"
           class="height-animation"></iframe>
         <div class="separator"></div>
-        <p class="text-center copyright">
+        <p class="text-center copyright" id="copyright">
           Copyright © 2026 Anjouan Licensing Services Inc.
         </p>
       </div>
@@ -96,6 +96,17 @@
     </div>
   </div>
   </div>
+  <script>
+    (function () {
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      const today = new Date();
+      const dateString = today.toLocaleDateString('en-US', options);
+      const year = today.getFullYear();
+
+      document.getElementById('generation-date').innerText = 'This page was generated on ' + dateString;
+      document.getElementById('copyright').innerText = 'Copyright © ' + year + ' Anjouan Licensing Services Inc.';
+    })();
+  </script>
 </body>
 
 </html>
