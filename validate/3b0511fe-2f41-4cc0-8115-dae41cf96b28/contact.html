@@ -3,17 +3,17 @@
   <head>
     <title>Complaint form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../../assets/validator/flexboxgrid.min.css" type="text/css" rel="stylesheet">
-    <link href="../../../../assets/validator/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="../../../../assets/validator/validator.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../../assets/validator/datepicker/bootstrap-datepicker3.standalone.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../../assets/validator/datepicker/datepicker-custom.css" type="text/css">
-    <link rel="stylesheet" href="../../../../assets/external/intlTelInput.css">
-    <link rel="stylesheet" href="../../../../assets/external/jquery.timepicker.min.css">
-    <script src="../../../../assets/validator/jquery.min.js"></script>
-    <script src="../../../../assets/validator/datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="../../../../assets/external/intlTelInput.min.js"></script>
-    <script src="../../../../assets/external/jquery.timepicker.min.js"></script>
+    <link href="../../assets/validator/flexboxgrid.min.css" type="text/css" rel="stylesheet">
+    <link href="../../assets/validator/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="../../assets/validator/validator.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/validator/datepicker/bootstrap-datepicker3.standalone.min.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/validator/datepicker/datepicker-custom.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/external/intlTelInput.css">
+    <link rel="stylesheet" href="../../assets/external/jquery.timepicker.min.css">
+    <script src="../../assets/validator/jquery.min.js"></script>
+    <script src="../../assets/validator/datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../../assets/external/intlTelInput.min.js"></script>
+    <script src="../../assets/external/jquery.timepicker.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
@@ -38,7 +38,7 @@
       <p>
       If you are a client of Vanta Technology LTD and are experiencing issues, please file a complaint in English below. <br> Only complaints submitted in English will be reviewed.
       </p>
-      <form action="../../../../../../../../validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/contact.html.html_with_files" method="POST" enctype="multipart/form-data" class="complaint-form" id="complaint-form">
+      <form action="../..../../../../validate/3b0511fe-2f41-4cc0-8115-dae41cf96b28/contact.html_with_files" method="POST" enctype="multipart/form-data" class="complaint-form" id="complaint-form">
         <div>
           <p class="p-as-label">Name <span class="text-danger">*</span></p>
 
@@ -613,7 +613,7 @@
         const phoneInput = document.querySelector("#phone");
         const iti = window.intlTelInput(phoneInput, {
           initialCountry: "gb",
-          utilsScript: "../../../../assets/external/utils.js"
+          utilsScript: "assets/external/utils.js"
         });
         phoneInput.addEventListener('blur', () => validatePhone(iti));
 
